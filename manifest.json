@@ -1,0 +1,512 @@
+{
+  "$schema": "ppt-skill-manifest/v1",
+  "skill_name": "ppt-builder",
+  "version": "1.0.0",
+  "file_count": 84,
+  "files": {
+    "CHANGELOG.md": {
+      "sha256": "275305de75003e4ec34e2b618a898416793de976381c74a97736df1bf7f82233",
+      "size": 2023,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "README.md": {
+      "sha256": "8e8cf7fa05bc34fbbe163447a3b09d73f00dc270b3999301ec9efcb1e54b0711",
+      "size": 3263,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "SKILL.md": {
+      "sha256": "c1b637f4171c3cf11995f0629c1b62c9cbab66652f559f6e3381328c5eed675e",
+      "size": 8988,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "VERSION": {
+      "sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03",
+      "size": 6,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "references/chart-editing.md": {
+      "sha256": "37ccd257ae8f8c655e02703e90cdd9163f1254e21587cbe1c833ed8a2854f999",
+      "size": 3495,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "references/custom-template-workflow.md": {
+      "sha256": "969da6e73ea5b01b58ab33bf76eabc9f3f9cd4ba2d0b16e04c555aea9218582e",
+      "size": 3346,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "references/original-design-guide.md": {
+      "sha256": "2e09ec44fab54df8368687515a5f5a2db814dffbce2d6acaf22a41a70e02efd4",
+      "size": 4136,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "references/pptx-edit-schema.md": {
+      "sha256": "8d3ec50fa22ae8f4598d6bec9001b19a50b4e89492a683b494b76d505690a02d",
+      "size": 6211,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "references/workflow.md": {
+      "sha256": "bc655262d97bbcbf50b9e55630d8cf71aef1da9fdfff7521bfe822a45e85b6d6",
+      "size": 4410,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "scripts/apply_update.py": {
+      "sha256": "4c3cba650acd7813de2312d3c7b3537c415d65ec0390a73f2130709677d2b7b5",
+      "size": 7661,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "scripts/build_manifest.py": {
+      "sha256": "d6ff3893bf775c1efc551829ea0e20244023f186649bfce268629a255d733e7e",
+      "size": 2581,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "scripts/build_pptx.py": {
+      "sha256": "f14a01350e8a60afbc2bf16b8543c555959025ee747c739592eb125160fc9768",
+      "size": 9314,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "scripts/check_update.py": {
+      "sha256": "4d257c0eeffad8f0ff2b140cdc24b6b125ef29db39b61dcbea83c64dafeccbb6",
+      "size": 4724,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "scripts/render_slides.py": {
+      "sha256": "b615e9c9c12545526a6621b7deeec6721b7b815ced8d47d5b29e7aeedc94eaf5",
+      "size": 1943,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/INDEX.md": {
+      "sha256": "b88c7e92b62908637eb3fae794cee8108d4434d418ca94ad812853231fc114a5",
+      "size": 6321,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/architecture-deck/detail.json": {
+      "sha256": "2169b0b8bf695ac320c54727650166b230de7808f4984a333d2dc2ab0496cf52",
+      "size": 888611,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/architecture-deck/intro.md": {
+      "sha256": "9165e6ae1f2a3f0913c53531d87c524bd88538be244d60e59838d4f4bc575c84",
+      "size": 2862,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/architecture-deck/preview.png": {
+      "sha256": "f469e27b9a6807ca3728d1f26ff2437bdb98f877e6e5ce39e82029a2bb988d15",
+      "size": 987250,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/architecture-deck/template.pptx": {
+      "sha256": "d1ac3b746a4fcb7bfa26ac135ca40ef1ddc41ef198f8b99cb1620cdeff58882c",
+      "size": 18708314,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/competition-speech/detail.json": {
+      "sha256": "46b15faed0e190768c673dcd2c4e79991485a85cf6cef1bc362edba02eed2707",
+      "size": 1051825,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/competition-speech/intro.md": {
+      "sha256": "073a09f30e526541460088b3065bc10cb5146bde928a9e9298950ec9372fa528",
+      "size": 2205,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/competition-speech/preview.png": {
+      "sha256": "a27b1d341ec29d2252db2a9eaa72562f8b8d174c0d22394269ff961d9529287f",
+      "size": 982218,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/competition-speech/template.pptx": {
+      "sha256": "42294d5131086d5ba6ab09160fc9e13d4fe708571be4a264de663aafa8b2988b",
+      "size": 17011236,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/cute-orange-class/detail.json": {
+      "sha256": "94102f888b4e2e280ab92e6bc2767355a750c54b8820780d9c6aae5920a13057",
+      "size": 63134,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/cute-orange-class/intro.md": {
+      "sha256": "a4c3eedcc588dfed02e4c1af0a09ab17b2cebaf528df116dca188522e976b684",
+      "size": 3041,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/cute-orange-class/preview.png": {
+      "sha256": "0534bed9065e70f276d3566edd6486736ed97bd593be4db8da7a8a83aa76c5e2",
+      "size": 737531,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/cute-orange-class/template.pptx": {
+      "sha256": "247032ac711323aa4cd3b0d284fa9e1f18b2ae7d89a83d496e4b542fbf917e1d",
+      "size": 17580891,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/data-viz-deck/detail.json": {
+      "sha256": "9b39178eab874a90e013fdf937e4d3ab861a2883f23dfbad1f8a5594905a940e",
+      "size": 751342,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/data-viz-deck/intro.md": {
+      "sha256": "a8f7201e36554371598a2ef070951d41968a62fbe2e6e0d36aa840fa547f28eb",
+      "size": 3454,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/data-viz-deck/preview.png": {
+      "sha256": "47f2a76df9eb2861578b2103fbd159b5554613768ce6aa16aaf08ca22c119a09",
+      "size": 844847,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/data-viz-deck/template.pptx": {
+      "sha256": "2107779c56275769fcac74fe10add99062ff6c2d0db3ea42928fd8eefbfaf229",
+      "size": 18514569,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/geometric-summary/detail.json": {
+      "sha256": "6b68e68e27e12d62e81af496a8fa8a9c155ab4c580e71ed1a738a390a0287eeb",
+      "size": 136486,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/geometric-summary/intro.md": {
+      "sha256": "854e0817f9088804d06c8f703de530c3c9f68ca0838bf852f2ccfd296fef3826",
+      "size": 2558,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/geometric-summary/preview.png": {
+      "sha256": "ebfab087064a0fb489b3cc0331f55fcfd2b631fbb93ba9a73dec05a805944dfc",
+      "size": 565416,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/geometric-summary/template.pptx": {
+      "sha256": "bfd863aff8322323608b64228c9c7c2ffd4f3ab61d6254bdff35255f4372ad02",
+      "size": 29342610,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/mckinsey-style/detail.json": {
+      "sha256": "1b4a29f7e7c639db0a4aaebfe31be19247143801fc00faec10ada230c2b5f569",
+      "size": 757093,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/mckinsey-style/intro.md": {
+      "sha256": "e1ff44685399f347e30821e2f89456050e41c62ff9880be1864a09d3346f98a4",
+      "size": 2731,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/mckinsey-style/preview.png": {
+      "sha256": "918f50363f436bbe70e99bad2e10b99bab24d42c8ea785c5cee092061006a8f2",
+      "size": 1299463,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/mckinsey-style/template.pptx": {
+      "sha256": "93379ab10224d0c5c4003d57122a864b67cb26a5f5fcf21d66e3d6943cbcb541",
+      "size": 24112434,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/minimal-business-summary/detail.json": {
+      "sha256": "8c355410faf010c9bbcb280fa37b81c7af21b213452fc6e52cdaf0b2e164dea6",
+      "size": 80642,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/minimal-business-summary/intro.md": {
+      "sha256": "8f3e4055786d5968b2baa1288e001f1f9cac42430311bb2fd2f7dbcec44cdbe0",
+      "size": 2272,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/minimal-business-summary/preview.png": {
+      "sha256": "482174b8a70e7a0f775730d1527d3da3d3be5f91881eeff548111d349d862bb0",
+      "size": 332759,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/minimal-business-summary/template.pptx": {
+      "sha256": "8f7de813e4a463f0bf37a2c43be24be5c536ba41fc30bfb5811abb2b9909c9eb",
+      "size": 3805749,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/operations-deck/detail.json": {
+      "sha256": "c85e1fb4baf20260ec50bfaf7ffdf14dc3154c5f365e2a228d6a8dacc968fecb",
+      "size": 817168,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/operations-deck/intro.md": {
+      "sha256": "d8500d7233c29bf5fda226b6939b557c9f0e41bf268456e559b554abb7943ffc",
+      "size": 2731,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/operations-deck/preview.png": {
+      "sha256": "5868af0930472f45ae185165fead56c72e346ad4e6069efaf582c4510e8a7ad4",
+      "size": 672722,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/operations-deck/template.pptx": {
+      "sha256": "03f59a2a4cba3ea8783b0a3875b794d3aa9c9eaf9ac6414e2d988250f9f8ce39",
+      "size": 18935007,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/premium-corp/detail.json": {
+      "sha256": "88e961e703ac2428ac6547d397796be761e3dcca31600de5de5339f927514aea",
+      "size": 639307,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/premium-corp/intro.md": {
+      "sha256": "cff978b7e8bf8f46e21265efb6eb25aed17ed9cafd736dd7b5a9c092e22308c1",
+      "size": 3470,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/premium-corp/preview.png": {
+      "sha256": "fe88a0d1062dd48f5df8e831e474c61323ac53c84844db199f31db84486f33c6",
+      "size": 1005239,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/premium-corp/template.pptx": {
+      "sha256": "092be10e12d6340613134f996727a63ae777fa055d760c506dde8604b97fd278",
+      "size": 13588933,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/quarterly-illust/detail.json": {
+      "sha256": "51f03f9d809c03839fae9bcd4f359d605f2898010a45f424f8f046fa309d66a3",
+      "size": 108294,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/quarterly-illust/intro.md": {
+      "sha256": "d17388a69788e3f9574ad5299b435a87836ed0626a68da0979570af63c1e63f5",
+      "size": 2795,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/quarterly-illust/preview.png": {
+      "sha256": "ddcfea9c3b0f46bfb59b05511e0ec35ad5dc95e11760410efd911da7d21cfb69",
+      "size": 520460,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/quarterly-illust/template.pptx": {
+      "sha256": "0513d003cbc6bfaa7d856100ae470c199d6b2f4164028579894c0930ee21a206",
+      "size": 36707464,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/red-patriot-general/detail.json": {
+      "sha256": "18c47a0fc3c496eb2b9003b7b59dcaf5686034989b0048fef384532843929fb6",
+      "size": 127742,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/red-patriot-general/intro.md": {
+      "sha256": "db38395152db2b7f90957ba562cde74a10e96978e610094bac8f54affb6d5f0f",
+      "size": 2962,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/red-patriot-general/preview.png": {
+      "sha256": "093b82e5e8c66504ed3e57c8892f5f5847d93e7aa55bac40f4776a92dc4974ec",
+      "size": 1425787,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/red-patriot-general/template.pptx": {
+      "sha256": "9ba09ced4e814026a06c40500fe5dec6f04a2c9fc1668f1c84fb038675a9da31",
+      "size": 61250497,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/red-patriot-youth/detail.json": {
+      "sha256": "c6a506ec58daf3073433b43e42290329044338abbbd2ad32b6b208f7b1c18e20",
+      "size": 83339,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/red-patriot-youth/intro.md": {
+      "sha256": "6e9512e3f5bf1025fe01f316872ba0af66966b8ad1830b777311f333b9d5d4c4",
+      "size": 3063,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/red-patriot-youth/preview.png": {
+      "sha256": "5ef1b08fe7313df28d542d3e23c87c0f98ace34c34fa38c4fcb8eac25d328340",
+      "size": 908470,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/red-patriot-youth/template.pptx": {
+      "sha256": "4a8375e1734f5f1c41d638e846e4c037e4e7ce28dbb59fcc653b3743873134e6",
+      "size": 27845457,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/report-savior/detail.json": {
+      "sha256": "7735d49e370f4ee432a57ec394047a03567c570fe2639d690ffcd3c9def46e24",
+      "size": 780355,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/report-savior/intro.md": {
+      "sha256": "8817a17649b656227075a51e307fa3741c948b652d3e76e5667df5a689603f27",
+      "size": 2998,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/report-savior/preview.png": {
+      "sha256": "f0bc470a5f202897c06180500f9df0cbc1cf50462d4ddf225c5f2f39255e8c80",
+      "size": 1317448,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/report-savior/template.pptx": {
+      "sha256": "26d72dcb9e05a1696f05b074345686937e3f9a24668eb7e6dd0e13672e160260",
+      "size": 23988891,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/report-template-massive/detail.json": {
+      "sha256": "3222827853d6f92c2798f534e3d5a0f0121a4f4ebf162ba0e7ddcdfb275a9aa7",
+      "size": 2127189,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/report-template-massive/intro.md": {
+      "sha256": "ca2f032a73818e32fc482dbbea2101ac2321cc4f14309bb00102f153b1495325",
+      "size": 3031,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/report-template-massive/preview.png": {
+      "sha256": "5b688e15d1d976d82890bdcedb381016fc8cfb17774b08af1b4727fb8c96e086",
+      "size": 1093029,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/report-template-massive/template.pptx": {
+      "sha256": "1b5e90f2643df28445c714eedbf6e5162f5e60d85cf5defa8da97ab69d2cf9b2",
+      "size": 27578305,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/thesis-formula/detail.json": {
+      "sha256": "e7c7a39b9588e5d913ba4f5b9a815ea9ca1a11d4659644be93a2e77e0d70a205",
+      "size": 257647,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/thesis-formula/intro.md": {
+      "sha256": "035846506d864f9e0f1d52ce4ee64ea0e78f96f736e01fbcbd8d44aea4f9e9c9",
+      "size": 2840,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/thesis-formula/preview.png": {
+      "sha256": "5175e05d9adce9632284315936e682dce0a8f72f5359e270ace751226f7b4fb0",
+      "size": 610798,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/thesis-formula/template.pptx": {
+      "sha256": "9611ec9d73a3bced779a6242b4cd1a4cb3470fac547986613e8fdb0c825dc885",
+      "size": 43977702,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/thesis-novice/detail.json": {
+      "sha256": "ba1167d1de3da54395884df87cb1536ceb5ec61bf1e5fa9b86f9eaa59117869d",
+      "size": 223775,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/thesis-novice/intro.md": {
+      "sha256": "dbd5cdc1556d9709f137f69a9e23f3682660357bd751631b7c926c51f2e9cdd4",
+      "size": 3313,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/thesis-novice/preview.png": {
+      "sha256": "3c1afce9618827e75646b8177f6a26a519bdc745aa68aa38faed9a41be2e7c26",
+      "size": 908041,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/thesis-novice/template.pptx": {
+      "sha256": "f7c21f9521f78d3e264d6e9dbc65b1cbbc7830495093f070841b8a2bc4ab18da",
+      "size": 72816812,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/top-thesis/detail.json": {
+      "sha256": "8dccf45b8ea59acd6f4544787117624f4bd299f8ce639e5420171f88d87cd008",
+      "size": 254827,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/top-thesis/intro.md": {
+      "sha256": "5a0fd9174895a539443058eb0e7b5e8b7aede03f35f0a7c3bd9e45185b188a94",
+      "size": 2183,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/top-thesis/preview.png": {
+      "sha256": "8966eba860d51bb33f6553edff4652385491b6e30178801df662a4cf7167a6a3",
+      "size": 538428,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "templates/top-thesis/template.pptx": {
+      "sha256": "f5ea63e5ec718f67a8f11396d38119be12fd3917783e92fa5ebc945468d8e5c4",
+      "size": 81487011,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    },
+    "updates.json": {
+      "sha256": "3cf2a3b290688dfb03d8bfe02a583e88bab3f6b1f336c25998407f7574fe1d99",
+      "size": 4648,
+      "version_added": "1.0.0",
+      "last_modified": "1.0.0"
+    }
+  }
+}
