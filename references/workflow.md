@@ -87,13 +87,13 @@ python3 -c "import json; d=json.load(open('templates/<slug>/detail.json')); prin
 }
 ```
 
-强约束：
+约束：
 - **每个 editable=true 的 slot 都必须出现在 edits 里**（不留占位文字）
-- **每条 new_text 的视觉宽度不能超过 slot 的 `max_chars`**（中文 1 字=1，英文/数字≈0.5）。参考同槽的 `chars_per_line` / `max_lines` 判断会不会换行出框。
-- **太长就缩短文字，绝不改字号**：同一 `level` 的标题必须同字号（见 `type_scale`），靠精炼用词控制长度，不要把某处字号改小。
+- **`max_chars` 是软性参考、不是硬上限**（中文 1 字=1，英文/数字≈0.5）。尽量靠近容量，但**略微超出没关系**；**严禁为凑数而截断文字、在结尾加 `...` / `…` / `等等`** —— 被省略号截断的半句话比轻微超框难看得多。太长就用更精炼的措辞**重写**，或换更大的版式/页面。
+- **同一 `level` 的标题保持原字号，不要逐处改字号**（见 `type_scale`）；靠精炼用词控制长度，不要改字号也不要加省略号。
 - **改了 agenda 的章节文字，必须同步改对应分章扉页 / 面包屑**
 - editable=false 的 slot（"01"、"02"、"%" 之类）通常不出现在 edits 里
-- 构建时务必带 `--detail`，让 `build_pptx.py` 能跑出框检测；建议用 `--strict` 让出框直接报错，便于一轮修好。
+- 构建时务必带 `--detail`。**不要加 `--strict`** —— 出框检测只作提示、不应阻断保存（`--strict` 会因超框拒绝保存，反而诱导截断）。
 
 ### A6. 跑构建
 
@@ -102,17 +102,17 @@ python3 scripts/build_pptx.py \
     templates/<slug>/template.pptx \
     edits.json \
     out/<name>.pptx \
-    --detail templates/<slug>/detail.json \
-    --strict
+    --detail templates/<slug>/detail.json
 ```
 
-`--strict` 会在 expected_text 不匹配或 slot 找不到时报错退出。默认会自动 sibling-lookup detail.json，但显式 `--detail` 更稳。
+默认会自动 sibling-lookup detail.json，但显式 `--detail` 更稳。出框检测默认只打印提示、不阻断；`--strict` 仅在你确实想"出框就失败"时才用（日常不建议，会诱导截断）。
 
 ### A7. 自检
 
 跑 `render_slides.py` 渲染最终 pptx，目测：
 - 没有遗留占位文字
-- 文字没溢出 / 换行错乱
+- **没有被省略号截断的半句话**（宁可轻微超框，也不该出现 `...`）
+- 文字换行没有明显错乱
 - 章节名前后一致
 - 顺序符合大纲
 

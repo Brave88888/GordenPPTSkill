@@ -109,8 +109,11 @@ python3 scripts/check_update.py     # 列出 added / modified / removed
 
 1. **不改排版** —— 只改文字。形状的位置、大小、颜色、字体、字号、行距，都不动。
 2. **所有占位文字必须替换** —— 模板里的 "Question 1" / "Vivamus..." / "Key Words Here" / "项目名称" 等占位文本都必须用真实内容替换。一份完成的 PPT 里不应出现任何示例占位词。
-3. **字数受 `max_chars` 约束（按文本框真实尺寸精算，含 20% 余量）** —— detail.json 每个 slot 的 `max_chars` 是用"文本框宽高 + 字号"算出的容量（单位：视觉宽度，中文 1 字=1、英文/数字≈0.5）。还提供 `chars_per_line`（每行可容字数）和 `max_lines`（可容行数）。**写文字前先看这三个值**，确保不超过 `max_chars`。`capacity_unknown:true` 的槽（自适应/组合内异形框）测不准，谨慎短写。
-   - 构建时 `build_pptx.py` 会**自动检测出框**：超容量会告警；加 `--strict` 时直接拒绝保存，必须缩短后重试。出框时**只缩短文字、不要改字号**（改字号会破坏同级一致，见第 8 条）。
+3. **`max_chars` 是软性参考，不是硬性上限；严禁用省略号截断** —— detail.json 每个 slot 的 `max_chars` / `chars_per_line` / `max_lines` 是按文本框尺寸估算的容量，**仅供参考**，帮助你把握"这格大概能放多少字"。
+   - 优先写**自然、完整、精炼**的文字。略微超出通常没关系（容量已留 20% 余量，PPT 文本框本身也有弹性）。
+   - **绝对禁止为了凑数而砍掉后半句、在结尾加 `...` / `…` / `等等` 来硬凑长度** —— 被省略号截断的半句话，比轻微超框难看得多，是最差的结果。
+   - 真的太长时，按优先级处理：① 用更精炼的措辞**重写**（真正的概括，不是切断）；② 减少要点条数 / 换一个空间更大的版式或页面；③ 实在不行，**宁可让它轻微超出一点，也不要出现省略号**。
+   - `build_pptx.py` 的出框检测**只是提示、不阻断**保存。**日常不要加 `--strict`**（它会因超框拒绝保存，从而诱导截断）。`capacity_unknown:true` 的槽测不准，凭目测把握。
 4. **数字 / 序号默认不动** —— `editable: false` 的 slot 是装饰性 "01/02/1/2/%" 之类，除非用户明确要求改顺序，否则保持。
 5. **图形 / 图表通常无法同步** —— 装饰性的进度条 / 圆环 / 旗帜路径 / 流程箭头是固定形状；改了百分比文字不会改弧长。每个模板 detail.json 里如有这类页面会在 `cautions` 字段列出。
 6. **真实数据图表才能改数据** —— 如果某页有 PPT 原生 chart（`shape.has_chart=True`），可以用 `build_pptx.py --chart-data` 同步更新；详见 [`references/chart-editing.md`](./references/chart-editing.md)。
@@ -120,10 +123,10 @@ python3 scripts/check_update.py     # 列出 added / modified / removed
    - 如果 `ending` 数组为空，**直接以最后一张内容页收尾**，不要硬造"感谢聆听"。
    - 同理，`agenda` 空 → 不强加目录；`section_divider` 空 → 不强加分章扉页。
    - 也就是说：**模板有什么角色就用什么角色**，少一个角色就少一页，不要破坏视觉一致性去拼凑。这条规则在 v1.0.3 起对所有模板生效。
-9. **同级标题字号必须一致，靠"控制长度"而非"缩字号"达成** ——
-   - detail.json 顶部有 `type_scale`（字号层级表，level 1 = 最大），每个 slot 标了 `level`。**同一 level 的文字必须保持模板原字号，不要改字号。**
-   - 当某处文字太长放不下时，**永远是缩短文字**（换更精炼的表达），**绝不是把这一处的字号改小** —— 那会让本该同级的标题大小不一，非常难看。
-   - 选多页拼一份 PPT 时，确认各页同 level 的标题用词长度相近，整体才齐整。
+9. **同级标题字号必须一致，不要逐处改字号** ——
+   - detail.json 顶部有 `type_scale`（字号层级表，level 1 = 最大），每个 slot 标了 `level`。**同一 level 的文字保持模板原字号，不要改字号。**
+   - 某处文字偏长时，用**更精炼的措辞重写**来控制长度（见第 3 条），**不要把这一处字号改小**（会破坏同级一致），**也不要截断加省略号**。
+   - 选多页拼一份 PPT 时，让各页同 level 的标题用词长度相近，整体才齐整。
 
 ## 标准工作流（模式 A）
 
@@ -146,13 +149,12 @@ TEMPLATE=templates/minimal-business-summary
 #      ]
 #    }
 
-# 4. 跑构建
+# 4. 跑构建（不要加 --strict：出框检测只作提示，不应阻断；超框宁可轻微超出也别截断加省略号）
 python3 scripts/build_pptx.py \
     $TEMPLATE/template.pptx \
     edits.json \
     out/final.pptx \
-    --detail $TEMPLATE/detail.json \
-    --strict
+    --detail $TEMPLATE/detail.json
 
 # 5. （可选）渲染最终 pptx 给用户预览 / 自检（每页一张 PNG）
 python3 scripts/render_slides.py out/final.pptx out/renders --dpi 144

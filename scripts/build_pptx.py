@@ -251,6 +251,7 @@ def run(args) -> int:
 
     # Apply edits BEFORE pruning so slide indices match the template
     overflow_issues: list[str] = []
+    ellipsis_issues: list[str] = []
     for p in planned:
         slide = prs.slides[p["slide"] - 1]
         shape_id = p["address"].get("shape_id")
@@ -270,32 +271,42 @@ def run(args) -> int:
         if not ok and args.strict:
             return 4
 
-        # Overflow lint (only when slot capacity metadata is available)
+        # Overflow check — advisory only. max_chars is a soft hint, not a hard
+        # limit; we never block or truncate. We only print a gentle note so the
+        # author can decide whether to rephrase more concisely.
         if not args.no_lint and p["meta"]:
             fits, omsg = check_overflow(p["new_text"], p["meta"])
             if omsg and not fits:
                 slot_id = p["meta"].get("slot_id", "?")
-                line = (f"slide {p['slide']:>3} {slot_id}: 文字过长 {omsg} "
+                line = (f"slide {p['slide']:>3} {slot_id}: 可能偏长 {omsg} "
                         f"-> {p['new_text'][:24]!r}")
                 overflow_issues.append(line)
-                print(f"OVERFLOW {line}", file=sys.stderr)
+                print(f"note {line}", file=sys.stderr)
             elif omsg and fits:  # autofit soft note
                 print(f"note  slide {p['slide']:>3}: {omsg}", file=sys.stderr)
 
+        # Catch accidental ellipsis-truncation, which looks worse than a slight
+        # overflow. Advisory only.
+        stripped = p["new_text"].rstrip()
+        if stripped.endswith(("...", "..", "…", "……", "等等", "等。")):
+            ellipsis_issues.append(
+                f"slide {p['slide']:>3} {(p['meta'] or {}).get('slot_id', '?')}: "
+                f"结尾疑似省略号截断 -> {p['new_text'][-16:]!r}")
+
     if overflow_issues:
-        print(f"\n{len(overflow_issues)} 处文字可能出框（请缩短文字到容量内，"
-              f"保持字号不变以维持同级一致）：", file=sys.stderr)
-        for line in overflow_issues:
+        print(f"\n提示：{len(overflow_issues)} 处文字偏长（仅提示，不影响保存）。"
+              f"可酌情用更精炼的措辞重写；但**不要截断加省略号**，也不要改字号——"
+              f"宁可轻微超出。", file=sys.stderr)
+
+    if ellipsis_issues:
+        print(f"\n⚠️ {len(ellipsis_issues)} 处文字结尾是省略号，很可能是为凑长度而截断"
+              f"（这是最差的结果）。请改成完整、精炼的表达：", file=sys.stderr)
+        for line in ellipsis_issues:
             print(f"  - {line}", file=sys.stderr)
-        if args.strict:
-            print("\n--strict: 因出框风险拒绝保存。缩短上述文字后重试。", file=sys.stderr)
-            return 5
 
     prune_slides(prs, selected)
     prs.save(args.output)
     note = f"\nSaved {args.output} with {len(selected)} slides and {len(planned)} edits"
-    if overflow_issues:
-        note += f"  (⚠️ {len(overflow_issues)} 处可能出框，见上)"
     print(note)
     return 0
 
