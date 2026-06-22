@@ -2,6 +2,21 @@
 
 按版本倒序列出可读变更。机器读取请用 [`updates.json`](./updates.json)；只读哪些文件变动请用 [`manifest.json`](./manifest.json) 的 `last_modified` 字段。
 
+## 1.0.20 — 2026-06-22
+
+**修复"幽灵图片框"（空 `<a:blip/>`）导致的"无法显示该图片"——这是 1.0.19 漏掉的另一类缺陷。**
+
+- 1.0.19 只修了"能解码失败"的 EMF；但还有一类更隐蔽的：`<p:pic>` 图片框的 `<a:blip/>` 是**空的**（不指向任何图片，slide rels 里也没有对应关系），在所有软件都显示"无法显示该图片"。
+- 全库扫描后**统一**把这些空图片框填上占位图（"占位图片 自行替换"），位置/版式/文字不变：
+  - `red-teaching-models`：第 1/2/13/18/22/26 页，共 14 处（你反馈的第 1 页 3 张即在此）。
+  - `red-teaching-framework`：第 28/29 页，共 6 处。
+  - `mckinsey-style`（旧模板）：第 6/7/8 页，共 16 处。
+  - `report-massive-reports`（旧模板）：第 90 页，1 处。
+- 刷新 `red-teaching-models` 预览（改用第 9/11/12/16 页，避开占位页）；其余模板预览未涉及占位页，保持不变。
+- 检测脚本已补强：除"解码失败"外，新增"空 blip"检测，避免再漏。
+
+升级：`python3 scripts/apply_update.py`。
+
 ## 1.0.19 — 2026-06-22
 
 **修复 `red-teaching-models` 第 26 页的 4 个 EMF 图标在 Mac PowerPoint / WPS / Keynote 上显示"无法显示该图片"。**
