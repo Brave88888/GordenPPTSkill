@@ -20,3 +20,6 @@ demo-grid.png
 # Local font caches / OS-specific
 *.swp
 *.swo
+
+# Office lock/temp files (created when a .pptx is open in PowerPoint/WPS)
+~$*
