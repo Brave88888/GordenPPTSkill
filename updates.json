@@ -1,9 +1,24 @@
 {
   "$schema": "ppt-skill-updates/v1",
-  "latest_version": "1.0.18",
+  "latest_version": "1.0.19",
   "update_source": "git+https://github.com/GordenSun/GordenPPTSkill.git#main",
   "_update_source_help": "Set update_source to a URL prefix (e.g. https://example.com/ppt-skill/v1/) that hosts the same updates.json + the per-file mirror, OR to a git remote+branch in the form 'git+https://...repo.git#main'. When unset, check_update.py reports 'Update source unset' and exits cleanly.",
   "history": [
+    {
+      "version": "1.0.19",
+      "released_at": "2026-06-22",
+      "summary": "Fixed 4 EMF icons on red-teaching-models slide 26 that showed '无法显示该图片' on macOS PowerPoint / WPS / Keynote: replaced the undisplayable displayed-images with the placeholder PNG (effect-only .wdp layers untouched); refreshed that template's preview to avoid the placeholder page. Other 20 templates verified clean.",
+      "added": [],
+      "modified": [
+        "VERSION",
+        "CHANGELOG.md",
+        "updates.json",
+        "manifest.json",
+        "templates/red-teaching-models/template.pptx",
+        "templates/red-teaching-models/preview.png"
+      ],
+      "removed": []
+    },
     {
       "version": "1.0.18",
       "released_at": "2026-06-22",

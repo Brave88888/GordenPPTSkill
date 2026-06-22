@@ -1,7 +1,7 @@
 {
   "$schema": "ppt-skill-manifest/v1",
   "skill_name": "ppt-builder",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "file_count": 109,
   "files": {
     ".gitattributes": {
@@ -17,10 +17,10 @@
       "last_modified": "1.0.0"
     },
     "CHANGELOG.md": {
-      "sha256": "c1ad2554fd9edc7413700f139cc363a5f671cfc95ccb3ee30a97b61411accb4c",
-      "size": 20514,
+      "sha256": "bdaeaef097c261b2f4c34f8c8084b38e27d269307d5745aa7bf0e1f0e34959f4",
+      "size": 21316,
       "version_added": "1.0.0",
-      "last_modified": "1.0.18"
+      "last_modified": "1.0.19"
     },
     "LICENSE": {
       "sha256": "6f52f1baed8c393758ff6e8bf9c515edd6fd377187ae38a64165a330573b7829",
@@ -47,10 +47,10 @@
       "last_modified": "1.0.18"
     },
     "VERSION": {
-      "sha256": "7c04a0fc70c361f001ca9007616c5f1824460c6b85a96ea16a84160533804e50",
+      "sha256": "de845d5f200af97f735e5f5dcc7b8c843cc6b98e0be7c23cc8ca1b3f73d078b9",
       "size": 7,
       "version_added": "1.0.0",
-      "last_modified": "1.0.18"
+      "last_modified": "1.0.19"
     },
     "assets/group-qr.jpg": {
       "sha256": "ba5b27c705682cfbcf4c51c6941d921191c7c5f5bfab0a26313c7b0b6cf6c8c8",
@@ -473,16 +473,16 @@
       "last_modified": "1.0.18"
     },
     "templates/red-teaching-models/preview.png": {
-      "sha256": "b1fb6fd989da8fad690cc449b7ca19384dcdeac8164a9cb1d1f6a99de2ec261b",
-      "size": 963192,
+      "sha256": "11a0ac3f3292be1bab2afda065b372305ea3a3c7a6f3c5f8ae9e02b424ba8329",
+      "size": 1030937,
       "version_added": "1.0.18",
-      "last_modified": "1.0.18"
+      "last_modified": "1.0.19"
     },
     "templates/red-teaching-models/template.pptx": {
-      "sha256": "1f6aa8b6422cdd94cc69442f4b0404bbf4d30c4bac348a060bd46419ac9c7a0c",
-      "size": 2561533,
+      "sha256": "76551058ada3a863a822e703cc9e71a8ecf75031d3ded1e5a475371836269693",
+      "size": 2585233,
       "version_added": "1.0.18",
-      "last_modified": "1.0.18"
+      "last_modified": "1.0.19"
     },
     "templates/report-massive-charts/detail.json": {
       "sha256": "2c92adb7c9e7d384984837402394587398aba72bb3819649d3c1d15fd367e2eb",
@@ -653,10 +653,10 @@
       "last_modified": "1.0.6"
     },
     "updates.json": {
-      "sha256": "1f1e523fa0a245fc72e79344653ed5268239d9f5075da82ebe669ebe3b324c4a",
-      "size": 17412,
+      "sha256": "0a523e4b8c36ca0f25241aef4572f6dc2c998bead3521c39ebc465c47ef47c6c",
+      "size": 18103,
       "version_added": "1.0.0",
-      "last_modified": "1.0.18"
+      "last_modified": "1.0.19"
     }
   }
 }

@@ -2,6 +2,17 @@
 
 按版本倒序列出可读变更。机器读取请用 [`updates.json`](./updates.json)；只读哪些文件变动请用 [`manifest.json`](./manifest.json) 的 `last_modified` 字段。
 
+## 1.0.19 — 2026-06-22
+
+**修复 `red-teaching-models` 第 26 页的 4 个 EMF 图标在 Mac PowerPoint / WPS / Keynote 上显示"无法显示该图片"。**
+
+- 该页（铅笔三视角信息图）的 4 个小图标是 Windows EMF 矢量图（`image24~27.emf`），非 Windows 端无法解码，显示为破图框。已统一替换为占位图（"占位图片 自行替换"），其余版式 / 文字 / 配色不变。
+- 替换逻辑：只替换被当作"显示主图"（`a:blip`）且无法被解码的图片；艺术效果的 `.wdp` 源层不动。
+- 同步刷新 `red-teaching-models` 的 `preview.png`（改用第 2/11/12/16 页，避开占位页）。
+- 全库其余 20 套模板经扫描均无此问题；`red-teaching-framework` 不受影响。
+
+升级：`python3 scripts/apply_update.py`。
+
 ## 1.0.18 — 2026-06-22
 
 **新增 2 套高级红色教学模板（19 → 21 套）。**
