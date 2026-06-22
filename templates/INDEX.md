@@ -1,6 +1,6 @@
 # 内置 PPT 模板索引
 
-> 19 套内置模板，覆盖中文场景的绝大多数需求。选模板时按"主色 + 风格 + 场景"快速筛选；候选 2-3 个时把对应 `preview.png` 给用户挑。
+> 21 套内置模板，覆盖中文场景的绝大多数需求。选模板时按"主色 + 风格 + 场景"快速筛选；候选 2-3 个时把对应 `preview.png` 给用户挑。
 
 ⚠️ **非商业使用** — 模板仅供个人学习与研究，禁止商业用途。
 
@@ -14,6 +14,8 @@
 | `quarterly-illust` | 蓝灰酸性插画季度总结 | 19 | 亮蓝 `#4F4FFF` + 黑白 | Y2K 酸性设计 + 黑白人物插画，互联网风 |
 | `geometric-summary` | 多彩几何工作总结 | 21 | 4 主色（蓝/红/黄/绿） | 几何切片 + One/Two/Three/Four 大字，活力 |
 | `red-patriot-general` | 红色爱国主题教育通用 | 25 | 党政红 `#A8181C` | 金色书法 + 绸缎飘带，党课/主题党日 |
+| `red-teaching-framework` | 高级红色教学实施框架 | 30 | 党政红 `#C00000` + 橙 | 满版红色教学图解，完整教学逻辑链，教学比赛/说课首选 |
+| `red-teaching-models` | 高级红色数智教学图解 | 30 | 党政红 `#C00000` + 紫 | 同系列图型合辑（漏斗/齿轮/鱼骨/放射），数智教学/课改 |
 | `thesis-novice` | 多专业开题方法论库 | 32 | 墨绿 `#4F6E4F` | 32 套填好的研究方法范例，跨 6 大专业 |
 | `premium-corp` | 高级感大厂 PPT 合辑 | 35 | 酱红 `#A52524` + 深蓝灰 | 35 套高级感版式（战略/运营/数据/思维模型） |
 | `architecture-deck` | 领导爱的架构图合辑 | 37 | 深蓝 `#1F3A93` | 大厂真实架构图（项目/AI/物流/供应链） |
@@ -34,6 +36,7 @@
 |---|---|
 | **深蓝 / 商务蓝** | `minimal-business-summary`、`operations-deck`、`report-savior`、`competition-speech`、`report-massive-models`、`report-massive-charts`、`report-massive-reports`、`architecture-deck`、`thesis-formula` |
 | **红色 / 党政** | `red-patriot-youth`、`red-patriot-general` |
+| **红色 / 教学（高密度图解）** | `red-teaching-framework`、`red-teaching-models` |
 | **酱红 / 大厂** | `premium-corp`、`mckinsey-style` |
 | **橙色 / 暖色** | `cute-orange-class` |
 | **多彩** | `geometric-summary` |

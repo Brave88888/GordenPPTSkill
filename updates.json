@@ -1,9 +1,34 @@
 {
   "$schema": "ppt-skill-updates/v1",
-  "latest_version": "1.0.17",
+  "latest_version": "1.0.18",
   "update_source": "git+https://github.com/GordenSun/GordenPPTSkill.git#main",
   "_update_source_help": "Set update_source to a URL prefix (e.g. https://example.com/ppt-skill/v1/) that hosts the same updates.json + the per-file mirror, OR to a git remote+branch in the form 'git+https://...repo.git#main'. When unset, check_update.py reports 'Update source unset' and exits cleanly.",
   "history": [
+    {
+      "version": "1.0.18",
+      "released_at": "2026-06-22",
+      "summary": "Added 2 premium red teaching templates (19 -> 21): red-teaching-framework (full teaching-implementation logic chain) and red-teaching-models (rich diagram set). Source PPTs were size-optimized (lossless-PNG photos -> JPEG q90, oversized images downsampled): deck1 26MB->6.4MB, deck2 6.7MB->2.4MB, layout unchanged.",
+      "added": [
+        "templates/red-teaching-framework/template.pptx",
+        "templates/red-teaching-framework/intro.md",
+        "templates/red-teaching-framework/detail.json",
+        "templates/red-teaching-framework/preview.png",
+        "templates/red-teaching-models/template.pptx",
+        "templates/red-teaching-models/intro.md",
+        "templates/red-teaching-models/detail.json",
+        "templates/red-teaching-models/preview.png"
+      ],
+      "modified": [
+        "VERSION",
+        "CHANGELOG.md",
+        "updates.json",
+        "manifest.json",
+        "SKILL.md",
+        "templates/INDEX.md",
+        "references/original-design-guide.md"
+      ],
+      "removed": []
+    },
     {
       "version": "1.0.17",
       "released_at": "2026-06-09",

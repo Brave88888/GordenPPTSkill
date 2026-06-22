@@ -1,8 +1,8 @@
 {
   "$schema": "ppt-skill-manifest/v1",
   "skill_name": "ppt-builder",
-  "version": "1.0.17",
-  "file_count": 101,
+  "version": "1.0.18",
+  "file_count": 109,
   "files": {
     ".gitattributes": {
       "sha256": "538c7a3e4a5ddc32a56c2f79f7e3abae99a9cb98e587bf681d9a7a1d19a554dc",
@@ -17,10 +17,10 @@
       "last_modified": "1.0.0"
     },
     "CHANGELOG.md": {
-      "sha256": "d3cd56db8b1a49cd4f2b974a3ca4957d2a60cec5d480892ad8b65e3f7de697e3",
-      "size": 19172,
+      "sha256": "c1ad2554fd9edc7413700f139cc363a5f671cfc95ccb3ee30a97b61411accb4c",
+      "size": 20514,
       "version_added": "1.0.0",
-      "last_modified": "1.0.17"
+      "last_modified": "1.0.18"
     },
     "LICENSE": {
       "sha256": "6f52f1baed8c393758ff6e8bf9c515edd6fd377187ae38a64165a330573b7829",
@@ -35,22 +35,22 @@
       "last_modified": "1.0.0"
     },
     "README.md": {
-      "sha256": "1e7ac0eaeee3f9b295a90700b6cf9d3df363162861744c10f5c6760506ad734b",
-      "size": 4014,
+      "sha256": "d1b4c095c0c1c0216131b096e6c4b644aa0437028ab3e1abf5d003e12d9a85cc",
+      "size": 3758,
       "version_added": "1.0.0",
-      "last_modified": "1.0.16"
+      "last_modified": "1.0.18"
     },
     "SKILL.md": {
-      "sha256": "87c53a360a34f8e7f33de1edae1981442be0fa5358db7eb0dc77ea0543cd90e2",
+      "sha256": "f3ecf7a39b0eceef3af62663952227646143834943409862d72efde306205072",
       "size": 14179,
       "version_added": "1.0.0",
-      "last_modified": "1.0.17"
+      "last_modified": "1.0.18"
     },
     "VERSION": {
-      "sha256": "c8e58b248cbb9c46ea49177cd5fa61281ec33ec875325858d2cf7bf6da73288a",
+      "sha256": "7c04a0fc70c361f001ca9007616c5f1824460c6b85a96ea16a84160533804e50",
       "size": 7,
       "version_added": "1.0.0",
-      "last_modified": "1.0.17"
+      "last_modified": "1.0.18"
     },
     "assets/group-qr.jpg": {
       "sha256": "ba5b27c705682cfbcf4c51c6941d921191c7c5f5bfab0a26313c7b0b6cf6c8c8",
@@ -89,10 +89,10 @@
       "last_modified": "1.0.0"
     },
     "references/original-design-guide.md": {
-      "sha256": "2e09ec44fab54df8368687515a5f5a2db814dffbce2d6acaf22a41a70e02efd4",
+      "sha256": "fbe502f5c4a5d4838c6ddeb321eb59bf0a31615be6cf9f7a73fff1bf11c216bb",
       "size": 4136,
       "version_added": "1.0.0",
-      "last_modified": "1.0.0"
+      "last_modified": "1.0.18"
     },
     "references/pptx-edit-schema.md": {
       "sha256": "8d3ec50fa22ae8f4598d6bec9001b19a50b4e89492a683b494b76d505690a02d",
@@ -143,10 +143,10 @@
       "last_modified": "1.0.0"
     },
     "templates/INDEX.md": {
-      "sha256": "97b68f0b2297e3bf43d056ead3ce534f1d8137f8fdaefe8f3096605d24e6d3fe",
-      "size": 7284,
+      "sha256": "56c7431cf88c2326a81be2fd5ac459fd9d3a48ff8d5d65a5798ed822d25fda1c",
+      "size": 7725,
       "version_added": "1.0.0",
-      "last_modified": "1.0.2"
+      "last_modified": "1.0.18"
     },
     "templates/architecture-deck/detail.json": {
       "sha256": "22d19aed8e536957925e257e5cccfaa64323b54a0b7e7132ba224923b9c0a0c8",
@@ -436,6 +436,54 @@
       "version_added": "1.0.0",
       "last_modified": "1.0.6"
     },
+    "templates/red-teaching-framework/detail.json": {
+      "sha256": "408c4c1fc19ce032ab19600b3bbb0aaee25437dcb68700b8d50d9cb9805082f6",
+      "size": 790350,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.18"
+    },
+    "templates/red-teaching-framework/intro.md": {
+      "sha256": "93eda9d42a810a1f5eaeb7252be65ce8926aa9548b6d1afceaaed0a6dfd0ff04",
+      "size": 3762,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.18"
+    },
+    "templates/red-teaching-framework/preview.png": {
+      "sha256": "46730d646d339094f4d5e35b84301757577841167cf6594c254a82679d8d9e8a",
+      "size": 1117333,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.18"
+    },
+    "templates/red-teaching-framework/template.pptx": {
+      "sha256": "0bba36c716562584f805c16abdb4407bdca33dafde324d6505493fb46689ae3c",
+      "size": 6689619,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.18"
+    },
+    "templates/red-teaching-models/detail.json": {
+      "sha256": "cc80db3959a6b68181923fcfe582cc8f963dcdced983150bae9a5ad1afe00eb5",
+      "size": 786370,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.18"
+    },
+    "templates/red-teaching-models/intro.md": {
+      "sha256": "a507efabeff5379b1a5d1f6baea2e7fc7acd936fcdf6b5b644a62033b559052c",
+      "size": 3744,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.18"
+    },
+    "templates/red-teaching-models/preview.png": {
+      "sha256": "b1fb6fd989da8fad690cc449b7ca19384dcdeac8164a9cb1d1f6a99de2ec261b",
+      "size": 963192,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.18"
+    },
+    "templates/red-teaching-models/template.pptx": {
+      "sha256": "1f6aa8b6422cdd94cc69442f4b0404bbf4d30c4bac348a060bd46419ac9c7a0c",
+      "size": 2561533,
+      "version_added": "1.0.18",
+      "last_modified": "1.0.18"
+    },
     "templates/report-massive-charts/detail.json": {
       "sha256": "2c92adb7c9e7d384984837402394587398aba72bb3819649d3c1d15fd367e2eb",
       "size": 1021413,
@@ -605,10 +653,10 @@
       "last_modified": "1.0.6"
     },
     "updates.json": {
-      "sha256": "43f556d9a6de3e45a57e2bc9dbcb759568b8eb718fb686c3e7691dc971bd18e6",
-      "size": 16306,
+      "sha256": "1f1e523fa0a245fc72e79344653ed5268239d9f5075da82ebe669ebe3b324c4a",
+      "size": 17412,
       "version_added": "1.0.0",
-      "last_modified": "1.0.17"
+      "last_modified": "1.0.18"
     }
   }
 }

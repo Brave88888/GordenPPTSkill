@@ -1,7 +1,7 @@
 ---
 name: gorden-ppt-skill
 description: >-
-  用 19 套内置中文 PPT 模板（或用户自带的 .pptx 模板）生成与编辑 PowerPoint 演示文稿：只替换文字、不破坏原排版/配色/字号，内置按文本框尺寸的出框检测与同级标题字号一致校验；也支持完全原创的简洁版式。当用户要"做 / 生成 / 制作 / 编辑一份 PPT / 演示文稿 / 幻灯片 / .pptx"，或需要工作汇报、年终与季度总结、述职竞聘、项目复盘、开题答辩、商务提案、教学课件、数据可视化等成品 PPTX 时使用。Use when the user wants to create or edit a PowerPoint / PPT / slides / .pptx deck, pick from built-in templates, or apply their own template without breaking the layout.
+  用 21 套内置中文 PPT 模板（或用户自带的 .pptx 模板）生成与编辑 PowerPoint 演示文稿：只替换文字、不破坏原排版/配色/字号，内置按文本框尺寸的出框检测与同级标题字号一致校验；也支持完全原创的简洁版式。当用户要"做 / 生成 / 制作 / 编辑一份 PPT / 演示文稿 / 幻灯片 / .pptx"，或需要工作汇报、年终与季度总结、述职竞聘、项目复盘、开题答辩、商务提案、教学课件、数据可视化等成品 PPTX 时使用。Use when the user wants to create or edit a PowerPoint / PPT / slides / .pptx deck, pick from built-in templates, or apply their own template without breaking the layout.
 ---
 
 # gorden-ppt-skill
@@ -65,7 +65,7 @@ python3 scripts/check_update.py     # 列出 added / modified / removed
 
 ### 模式 A：从内置模板里挑
 
-**默认走这条路。** 19 套内置模板覆盖了绝大多数中文场景。
+**默认走这条路。** 21 套内置模板覆盖了绝大多数中文场景。
 
 1. **读 [`templates/INDEX.md`](./templates/INDEX.md)** ——一份精简清单，列出每套模板的风格、主色、适用场景、页数。
 2. **匹配用户输入** —— 把用户描述（场景、风格关键词、所需页面类型、颜色偏好）和每个模板的 intro.md 对比。
